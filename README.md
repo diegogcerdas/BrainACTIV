@@ -20,8 +20,7 @@ Diego García Cerdas, Christina Sartzetaki, Magnus Petersen, Gemma Roig, Pascal 
 ## Try Out Image Manipulation
 
 <p align="left">
-  <a href="https://colab.research.google.com/drive/1nngCc7NZbEtIgBui0GukbCaKgIFa93sb?usp=sharing"><img src="https://img.shields.io/badge/Google_Colab-yellow?style=for-the-badge&logo=googlecolab&labelColor=000000
-  "></a>
+  <a href="https://colab.research.google.com/drive/1nngCc7NZbEtIgBui0GukbCaKgIFa93sb?usp=sharing"><img src="https://img.shields.io/badge/Google_Colab-yellow?style=for-the-badge&logo=googlecolab&labelColor=000000"></a>
 </p>
 
 You can try BrainACTIV on your own images through the Google Colab notebook linked above. 
