@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="BrainACTIV: Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation">
+  <meta name="description" content="BrainACTIV manipulates a reference image to enhance or decrease activity in a target cortical region using pretrained diffusion models, revealing the visuo-semantic properties that drive neural selectivity.">
+  <meta name="keywords" content="BrainACTIV, fMRI, visual cortex, neural selectivity, diffusion models, image manipulation, brain encoding, Natural Scenes Dataset, computational neuroscience">
+  <meta name="author" content="Diego García Cerdas, Christina Sartzetaki, Magnus Petersen, Gemma Roig, Pascal Mettes, Iris Groen">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BrainACTIV">
+  <meta property="og:title" content="BrainACTIV: Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation">
+  <meta property="og:description" content="Manipulating a reference image to enhance or decrease activity in a target cortical region using pretrained diffusion models.">
+  <meta property="og:url" content="https://diegogcerdas.github.io/BrainACTIV/">
+  <!-- TODO: add a 1200x630px preview image and uncomment
+  <meta property="og:image" content="https://diegogcerdas.github.io/BrainACTIV/static/images/social_preview.png">
+  -->
+  <meta property="article:section" content="Research">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BrainACTIV: Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation">
+  <meta name="twitter:description" content="Manipulating a reference image to enhance or decrease activity in a target cortical region using pretrained diffusion models.">
+
+  <!-- Academic metadata (used by Google Scholar) -->
+  <meta name="citation_title" content="BrainACTIV: Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation">
+  <meta name="citation_author" content="García Cerdas, Diego">
+  <meta name="citation_author" content="Sartzetaki, Christina">
+  <meta name="citation_author" content="Petersen, Magnus">
+  <meta name="citation_author" content="Roig, Gemma">
+  <meta name="citation_author" content="Mettes, Pascal">
+  <meta name="citation_author" content="Groen, Iris">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="International Conference on Learning Representations (ICLR)">
+
+  <meta name="theme-color" content="#f5576c">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>BrainACTIV | ICLR 2025</title>
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="static/js/teaser.js"></script>
+
+  <!-- Structured data for academic papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "BrainACTIV: Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation",
+    "author": [
+      {"@type": "Person", "name": "Diego García Cerdas", "affiliation": {"@type": "Organization", "name": "University of Amsterdam"}},
+      {"@type": "Person", "name": "Christina Sartzetaki", "affiliation": {"@type": "Organization", "name": "University of Amsterdam"}},
+      {"@type": "Person", "name": "Magnus Petersen", "affiliation": {"@type": "Organization", "name": "Goethe Universität Frankfurt"}},
+      {"@type": "Person", "name": "Gemma Roig", "affiliation": {"@type": "Organization", "name": "Goethe Universität Frankfurt"}},
+      {"@type": "Person", "name": "Pascal Mettes", "affiliation": {"@type": "Organization", "name": "University of Amsterdam"}},
+      {"@type": "Person", "name": "Iris Groen", "affiliation": {"@type": "Organization", "name": "University of Amsterdam"}}
+    ],
+    "datePublished": "2025",
+    "publisher": {"@type": "Organization", "name": "International Conference on Learning Representations (ICLR)"},
+    "url": "https://diegogcerdas.github.io/BrainACTIV/",
+    "keywords": ["fMRI", "visual cortex", "neural selectivity", "diffusion models", "image manipulation"],
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+  <!-- Title, authors and links -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">BrainACTIV</h1>
+            <h2 class="subtitle is-4 publication-subtitle">Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation</h2>
+
+            <!-- TODO: add personal links to the author names -->
+            <div class="is-size-5 publication-authors">
+              <!-- Authors in two lines of three; each line only wraps further on narrow screens -->
+              <span class="author-group">
+                <span class="author-block">Diego García Cerdas<sup>1</sup>,</span>
+                <span class="author-block">Christina Sartzetaki<sup>1</sup>,</span>
+                <span class="author-block">Magnus Petersen<sup>2</sup>,</span>
+              </span>
+              <span class="author-group">
+                <span class="author-block">Gemma Roig<sup>2</sup>,</span>
+                <span class="author-block">Pascal Mettes<sup>1</sup>,</span>
+                <span class="author-block">Iris Groen<sup>1</sup></span>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors affiliations">
+              <span class="author-block"><sup>1</sup>Informatics Institute, University of Amsterdam</span>
+              <span class="author-block"><sup>2</sup>Department of Computer Science, Goethe Universität Frankfurt</span>
+            </div>
+
+            <div class="publication-authors">
+              <span class="venue-badge">ICLR 2025</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://openreview.net/pdf?id=CGON8Btleu" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/diegogcerdas/BrainACTIV" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://colab.research.google.com/drive/1fL9q6PaOZ1S2gvXab2dzeKCBL88vWER_?usp=sharing" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-play"></i></span>
+                    <span>Colab Demo</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="teaser-figure">
+          <figure class="teaser-panel">
+            <img src="static/images/teaser/reference.jpg" alt="Reference image">
+            <figcaption>Reference image</figcaption>
+          </figure>
+          <figure class="teaser-brain">
+            <canvas id="brain-canvas" aria-label="3D brain with the selected region highlighted"></canvas>
+            <figcaption>Target region: <strong class="teaser-roi-name">FFA</strong></figcaption>
+          </figure>
+          <figure class="teaser-panel">
+            <img id="teaser-output" src="static/images/teaser/FFA.jpg" alt="Reference image manipulated to enhance FFA activity">
+            <figcaption>Enhancing <strong class="teaser-roi-name">FFA</strong> activity</figcaption>
+          </figure>
+        </div>
+        <div class="roi-buttons" role="group" aria-label="Target region">
+          <button class="roi-button is-active" data-roi="FFA" aria-pressed="true">FFA<span class="roi-category">faces</span></button>
+          <button class="roi-button" data-roi="EBA" aria-pressed="false">EBA<span class="roi-category">bodies</span></button>
+          <button class="roi-button" data-roi="VWFA" aria-pressed="false">VWFA<span class="roi-category">words</span></button>
+          <button class="roi-button" data-roi="OPA" aria-pressed="false">OPA<span class="roi-category">places</span></button>
+          <button class="roi-button" data-roi="PPA" aria-pressed="false">PPA<span class="roi-category">places</span></button>
+          <button class="roi-button" data-roi="RSC" aria-pressed="false">RSC<span class="roi-category">places</span></button>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          <strong>BrainACTIV</strong> (Brain Activation Control Through Image Variation) manipulates a reference image to
+          enhance or decrease activity in a target cortical region, revealing which visuo-semantic properties drive its selectivity.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Methodology</h2>
+      <div class="method-slider" id="method-slider">
+        <div class="method-steps" role="tablist" aria-label="Methodology steps">
+          <button class="method-step is-active" data-step="0" role="tab" aria-selected="true"><span class="step-number">1</span>Modulation embeddings</button>
+          <button class="method-step" data-step="1" role="tab" aria-selected="false"><span class="step-number">2</span>Spherical interpolation</button>
+          <button class="method-step" data-step="2" role="tab" aria-selected="false"><span class="step-number">3</span>Image generation</button>
+          <button class="method-step" data-step="3" role="tab" aria-selected="false"><span class="step-number">4</span>Interpolation strength</button>
+        </div>
+        <div class="method-stage">
+          <button class="method-arrow" data-direction="-1" aria-label="Previous step"><i class="fas fa-chevron-left"></i></button>
+          <div class="method-frames">
+            <img class="method-frame is-active" src="static/images/methodology/1_modulation_embeddings.png" alt="Diagram: a linear regression from CLIP embeddings of NSD images to ROI activations gives the modulation embeddings z_max and z_min">
+            <img class="method-frame" src="static/images/methodology/2_spherical_interpolation.png" alt="Diagram: the reference image's CLIP embedding is spherically interpolated towards the modulation embedding, from alpha 0 to 1" loading="lazy">
+            <img class="method-frame" src="static/images/methodology/3_image_generation.png" alt="Diagram: the interpolated embedding conditions a diffusion model through IP-Adapter, while SDEdit keeps the reference image's low-level information" loading="lazy">
+            <img class="method-frame" src="static/images/methodology/4_interpolation_strength.png" alt="Variations of a reference image along the interpolation strength alpha, from minimizing to maximizing a region's activity" loading="lazy">
+          </div>
+          <button class="method-arrow" data-direction="1" aria-label="Next step"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="method-captions">
+          <p class="method-caption is-active">Modulation embeddings are derived from a <strong>CLIP-based brain encoder</strong>: a linear regression from the CLIP embeddings of images in the Natural Scenes Dataset to a region's fMRI responses. Its weights <em>w</em> point in the direction of maximal activation, giving <em>z</em><sub>max</sub> to enhance activity and <em>z</em><sub>min</sub> to decrease it (both projected onto CLIP's natural image space).</p>
+          <p class="method-caption">For a reference image, we produce intermediate embeddings using <strong>spherical interpolation</strong> in CLIP space, from the image's own embedding (&alpha; = 0) towards the modulation embedding (&alpha; = 1).</p>
+          <p class="method-caption">The interpolated embedding conditions a <strong>diffusion model</strong> through IP-Adapter, while SDEdit starts generation from a partially noised version of the reference image (strength &gamma;), so that the variation keeps the reference image's structure.</p>
+          <p class="method-caption">The interpolation strength &alpha; controls how far the variation moves from the reference image: towards <em>z</em><sub>max</sub> to enhance the region's activity, or towards <em>z</em><sub>min</sub> to decrease it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+
+      <h3 class="title is-4">Maximizing and minimizing region activity</h3>
+      <img class="result-figure" src="static/images/results/1_encoder_predictions.png" loading="lazy"
+        alt="Predicted activations of FFA, EBA, VWFA, OPA, PPA and RSC from a DINO-ViT and an fwRF encoder, as the interpolation strength increases towards z_min and z_max">
+      <div class="content result-caption">
+        <p>
+          We use two brain encoders that are not CLIP-based, a DINO-ViT encoder and an fwRF encoder, to predict how our
+          manipulations affect each region. <strong>BrainACTIV successfully maximizes and minimizes predicted brain
+          activations across higher visual cortex</strong> as the interpolation strength &alpha; increases.
+        </p>
+      </div>
+
+      <h3 class="title is-4">Visuo-semantic properties of the manipulations</h3>
+      <img class="result-figure" src="static/images/results/2_category_presence.png" loading="lazy"
+        alt="Presence of semantic categories in the manipulated images as the interpolation strength increases, when maximizing and minimizing each region's activity">
+      <div class="content result-caption">
+        <p>
+          We identify the semantic categories whose presence increases when a region's activity is maximized (top) or
+          minimized (bottom). We focus on 16 categories based on previous research on neural representations and
+          behavioral judgments, create a CLIP embedding for each, and measure a category's presence in an image via its
+          cosine similarity with the image embedding. <strong>The category selectivity suggested by BrainACTIV agrees with
+          established neuroscientific findings.</strong>
+        </p>
+      </div>
+      <img class="result-figure" src="static/images/results/3_midlevel_features.png" loading="lazy"
+        alt="Correlation maps between each region's predicted activity and entropy, depth, Gaussian curvature and surface normals of the manipulated images">
+      <div class="content result-caption">
+        <p>
+          We also study the correlation between brain activity and mid-level image features. Results suggest an important
+          role of surface orientation in differentiating scene-selective (OPA, PPA, RSC) and object-selective regions
+          (FFA, EBA, VWFA), while depth correlations emphasize differences between scene-selective regions.
+          <strong>BrainACTIV facilitates the formulation of new fine-grained hypotheses about image properties driving
+          brain activity.</strong>
+        </p>
+      </div>
+
+      <h3 class="title is-4">Accentuating differences between regions</h3>
+      <img class="result-figure" src="static/images/results/4_region_differences.jpg" loading="lazy"
+        alt="Left: WordNet nouns whose presence increases the most when maximizing OPA, PPA and RSC. Right: reference images accentuated towards one region over another (OFA vs FFA, OPA vs PPA, OWFA vs VWFA)">
+      <div class="content result-caption">
+        <p>
+          Anatomically distinct regions can be selective for the same category, such as the place-selective OPA, PPA and
+          RSC. We identify differences between them through the WordNet nouns whose presence increases the most when we
+          maximize each region's activity (left). <strong>BrainACTIV can also visually accentuate the preferred features
+          that distinguish two regions</strong> (right): we create accentuation embeddings by subtracting the modulation
+          embeddings of each region from one another.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Try it yourself</h2>
+      <div class="content">
+        <p>
+          Manipulate your own images in our
+          <a href="https://colab.research.google.com/drive/1fL9q6PaOZ1S2gvXab2dzeKCBL88vWER_?usp=sharing" target="_blank">Google Colab notebook</a>,
+          which also shows the predicted activation of the target region and how the presence of object and scene
+          categories changes. The code to reproduce our experiments is on
+          <a href="https://github.com/diegogcerdas/BrainACTIV" target="_blank">GitHub</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{garciacerdas2025brainactiv,
+  title     = {{BrainACTIV}: Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation},
+  author    = {Garcia Cerdas, Diego and Sartzetaki, Christina and Petersen, Magnus and Roig, Gemma and Mettes, Pascal and Groen, Iris},
+  booktitle = {Proceedings of the International Conference on Learning Representations},
+  year      = {2025},
+  url       = {https://openreview.net/forum?id=CGON8Btleu}
+}</code></pre>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
