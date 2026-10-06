@@ -1,0 +1,6 @@
+input_folder: examples                                        # original images
+output_folder: outputs/exp1_image_variation/subj01_PPA_max    # manipulated images (same names); feature_diff_*.npy are saved here
+resolution: 64             # spatial feature maps are resized to resolution x resolution
+surface_normals_checkpoint: checkpoints/rgb2normal_consistency.pth
+category_vectors_folder: checkpoints/category_vectors
+device: auto               # auto | cuda | mps | cpu

@@ -1,0 +1,7 @@
+.vscode/
+__pycache__/
+checkpoints/
+outputs/
+nsd_cache/
+*.egg-info/
+.DS_Store

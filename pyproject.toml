@@ -1,0 +1,40 @@
+[project]
+name = "brainactiv"
+version = "1.0.0"
+description = "BrainACTIV: Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "numpy==2.2.6",
+    "scipy==1.15.3",
+    "scikit-learn==1.7.2",
+    "scikit-image==0.25.2",
+    "pillow==12.3.0",
+    "pyyaml==6.0.3",
+    "tqdm==4.70.1",
+    "torch==2.14.1",
+    "torchvision==0.29.1",
+    "transformers==5.18.0",
+    "diffusers==0.40.0",
+    "accelerate==1.15.0",
+    "safetensors==0.8.0",
+    "ip-adapter @ git+https://github.com/tencent-ailab/IP-Adapter.git@62e4af9d0c1ac7d5f8dd386a0ccf2211346af1a2",
+    "einops==0.8.0",
+    "visualpriors==0.3.5",
+    "timm==0.9.2",
+    "nibabel==5.4.2",
+    "h5py==3.16.0",
+    "pycocotools==2.0.11",
+    "datasets==4.8.4",
+    "nltk==3.10.3",
+    "spylls==0.1.7",
+    "berg @ git+https://github.com/gifale95/BERG.git@6a5fcfd7f528f322f5bbff34c2c1ce93bb780e7e",
+    "nilearn==0.13.1",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["brainactiv*"]

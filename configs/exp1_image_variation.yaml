@@ -1,0 +1,23 @@
+subject: 1
+roi: PPA                   # a single ROI name, or a list, e.g. [FFA-1, FFA-2]
+hemisphere: both           # can be 'lh', 'rh', or 'both'
+do_maximization: true      # whether to maximize or minimize
+use_other_subjects: true   # whether to use rest of the subjects for modulation embedding
+alpha: 0.75                 # slerp position from image embedding towards the ROI embedding
+gamma: 0.6                 # SDEdit strength (fraction of diffusion steps re-run)
+do_projection: true        # project the modulation embedding onto natural CLIP image space
+rng_seed: 0
+input_folder: examples
+output_folder: outputs/exp1_image_variation/subj01_PPA_max
+berg_dir: checkpoints/berg     # fwrf brain encoder weights (downloaded on first use)
+
+nsd:
+  root: ~/Documents/Datasets/NSD
+  tval_threshold: 5.0
+
+pipeline:
+  ip_adapter_checkpoint: checkpoints/ip-adapter_sd15.bin
+  projection_set_path: checkpoints/projection_set.npy
+  device: auto             # auto | cuda | mps | cpu
+
+# See more options in brainactiv/config.py
