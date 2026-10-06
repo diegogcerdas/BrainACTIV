@@ -11,6 +11,7 @@ Diego García Cerdas, Christina Sartzetaki, Magnus Petersen, Gemma Roig, Pascal 
 <strong> International Conference on Learning Representations (ICLR) 2025</strong>
 
 <p align="center">
+<a href="https://diegogcerdas.github.io/BrainACTIV/"><img src="https://img.shields.io/badge/Project%20Page-lightgray?style=for-the-badge"></a>
 <a href="https://openreview.net/forum?id=CGON8Btleu"><img src="https://img.shields.io/badge/ICLR Paper-darkred?style=for-the-badge"></a>
   <a href="https://www.biorxiv.org/content/10.1101/2024.10.29.620889"><img src="https://img.shields.io/badge/bioRxiv Preprint-red?style=for-the-badge&labelColor=%23CC0000&color=%23000000"></a>
 
