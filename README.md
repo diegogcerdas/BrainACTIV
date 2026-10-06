@@ -21,7 +21,7 @@ Diego García Cerdas, Christina Sartzetaki, Magnus Petersen, Gemma Roig, Pascal 
 ## Try Out Image Manipulation
 
 <p align="left">
-  <a href="https://colab.research.google.com/drive/1nngCc7NZbEtIgBui0GukbCaKgIFa93sb?usp=sharing"><img src="https://img.shields.io/badge/Google_Colab-yellow?style=for-the-badge&logo=googlecolab&labelColor=000000"></a>
+  <a href="https://colab.research.google.com/drive/1fL9q6PaOZ1S2gvXab2dzeKCBL88vWER_?usp=sharing"><img src="https://img.shields.io/badge/Google_Colab-yellow?style=for-the-badge&logo=googlecolab&labelColor=000000"></a>
 </p>
 
 You can try BrainACTIV on your own images through the Google Colab notebook linked above (also available as [`BrainACTIV_Demo.ipynb`](BrainACTIV_Demo.ipynb)). Besides the manipulated image, it shows the predicted activation of the target region from two brain encoders, and how the presence of 16 object and scene categories changes.
