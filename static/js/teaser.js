@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-const ROIS = ['FFA', 'EBA', 'VWFA', 'OPA', 'PPA', 'RSC'];
+const ROIS = ['EBA', 'FFA', 'VWFA', 'OPA', 'PPA', 'RSC'];
 const IMAGE_DIR = 'static/images/teaser';
 const LIGHT_PINK = new THREE.Color('#f093fb');
 const DARK_PINK = new THREE.Color('#f5576c');
