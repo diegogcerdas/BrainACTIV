@@ -1073,3 +1073,21 @@ a:focus {
 .result-caption p {
   margin-bottom: 0;
 }
+
+/* Corresponding author note, under the affiliations */
+.corresponding-note {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.corresponding-note a {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+}
+
+.corresponding-note a:hover {
+  color: var(--text-primary) !important;
+}
